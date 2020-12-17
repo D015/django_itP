@@ -5,8 +5,16 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("<h4>Check connection</h4>")
+    return render(request, 'main/index.html')
 
 
 def about(request):
-    return HttpResponse("<h4>About us page</h4>")
+    return render(request, 'main/about.html')
+
+
+def my_test(request):
+    return render(request, 'main/my_test.html')
+
+
+def my_test_http_response(request):
+    return HttpResponse('<h4>My test "HttpResponse"</h4>')
