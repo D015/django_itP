@@ -14,11 +14,11 @@
 <body>
     <aside>
         <img src="{% static 'main/img/logo_simple.svg' %}" alt="Logo">
-        <span class="Logo">itProger</span>
+        <span class="logo">itProger</span>
         <h3>Navigation</h3>
         <ul>
-            <a href=""><li><i class="fas fa-home"></i> Home page</li></a>
-            <a href=""><li><i class="fas fa-address-card"></i> About us page</li></a>
+            <a href="{% url 'home' %}"><li><i class="fas fa-home"></i> Home page</li></a>
+            <a href="{% url 'about' %}"><li><i class="fas fa-address-card"></i> About us page</li></a>
             <a href=""><li><i class="fas fa-paper-plane"></i> Сontacts</li></a>
         </ul>
     </aside>

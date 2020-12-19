@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum iste laudantium molestiae neque, numquam odit quasi sed velit. Exercitationem, provident.</p>
+        <button class="btn btn-warning">To the page about us</button>
+
+        <p> {{ values }} </p>
+        <p>{{ obj }}</p>
+
+        {% for el in values %}
+            <p>{{ el }}</p>
+        {% endfor %}
+        {% for obj_k, obj_v in obj.items %}
+            <p>{{ obj_k }} - {{ obj_v }}</p>
+        {% endfor %}
+
+        {% include 'main/my_test_include.html' %}
+        {% include 'main/my_test_include.html' %}
+    </div>
+{% endblock %}
