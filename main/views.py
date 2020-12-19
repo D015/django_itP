@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-# Create your views here.
-
 def index(request):
     return render(request, 'main/index.html', {'title': 'Home page !!!'})
 
@@ -14,7 +12,7 @@ def about(request):
 
 def my_test(request):
     data = {
-        'title': 'Home page !!!',
+        'title': 'Test page !!!',
         'values': ['Some', 'Hello', '123'],
         'obj': {
             'car': 'BMW',

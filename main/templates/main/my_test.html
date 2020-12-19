@@ -1,6 +1,6 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Home page{% endblock %}
+{% block title %}Test page{% endblock %}
 
 {% block content %}
     <div class="features">
@@ -12,10 +12,12 @@
         <p>{{ obj }}</p>
 
         {% for el in values %}
-            <p>{{ el }}</p>
+            <p>{{ el|lower  }}</p>
         {% endfor %}
         {% for obj_k, obj_v in obj.items %}
+            {% filter upper %}
             <p>{{ obj_k }} - {{ obj_v }}</p>
+            {% endfilter %}
         {% endfor %}
 
         {% include 'main/my_test_include.html' %}
