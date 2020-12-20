@@ -11,6 +11,7 @@
             <div class="alert alert-warning">
                 <h3>{{ el_news.title }}</h3>
                 <p>{{ el_news.preview }}</p>
+                <a href="{% url 'news-detail' el_news.id %}" class="btn btn-warning">More details</a>
             </div>
         {% endfor %}
     {% else %}
