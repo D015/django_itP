@@ -22,5 +22,15 @@
 
         {% include 'main/my_test_include.html' %}
         {% include 'main/my_test_include.html' %}
+    <h1>Form for adding an article</h1>
+        {#        <form method="post" action="/news/check">#}
+        <form method="post">
+            <input type="text" placeholder="Title" class="form-control"><br>
+            <input type="text" placeholder="Preview" class="form-control"><br>
+            <textarea class="form-control" placeholder="Full text"></textarea><br>
+            <input type="date" class="form-control"><br>
+            <input type="time" class="form-control"><br>
+            <button class="btn btn-success" type="submit">Add article</button>
+        </form>
     </div>
 {% endblock %}
