@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Articles(models.Model):
+class Article(models.Model):
     title = models.CharField('Title', max_length=50, default='No title')
     preview = models.CharField('Preview', max_length=250)
     full_text = models.TextField('Article')
